@@ -34,7 +34,7 @@ public struct OnboardingPageIndicator: View {
 struct OnboardingPrimaryButton: View {
     let title: LocalizedStringResource
     let tint: Color
-    let action: @MainActor () -> Void
+    let action: () -> Void
 
     var body: some View {
         Button {
