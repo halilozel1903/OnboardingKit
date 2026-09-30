@@ -1,0 +1,35 @@
+name: OnboardingKitDemo
+options:
+  bundleIdPrefix: io.github.halilozel1903
+  deploymentTarget:
+    iOS: "18.0"
+packages:
+  OnboardingKit:
+    path: ..
+targets:
+  OnboardingKitDemo:
+    type: application
+    platform: iOS
+    sources:
+      - OnboardingKitDemo
+    dependencies:
+      - package: OnboardingKit
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: io.github.halilozel1903.OnboardingKitDemo
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Trailmark
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight
+        MARKETING_VERSION: "2.1"
+        CURRENT_PROJECT_VERSION: "1"
+        SWIFT_VERSION: "6.0"
+        TARGETED_DEVICE_FAMILY: "1,2"
+schemes:
+  OnboardingKitDemo:
+    build:
+      targets:
+        OnboardingKitDemo: all
+    run:
+      config: Debug
